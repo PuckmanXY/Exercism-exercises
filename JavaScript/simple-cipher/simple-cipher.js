@@ -46,6 +46,7 @@ Cipher.prototype.decode = function(input) {
         }
     }
 
+    //comentário
     return decodedMessage;
 }
 
