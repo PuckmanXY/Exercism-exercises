@@ -45,6 +45,7 @@ Cipher.prototype.decode = function(input) {
             decodedMessage += String.fromCharCode(input.charCodeAt(i) + 3);
         }
     }
+
     return decodedMessage;
 }
 
