@@ -1,5 +1,19 @@
-var Cipher = function() {
-    this.key = 'xxxxxxxxxxx';
+var Cipher = function(key) {
+    this.key = '';
+    if(key == null){
+        this.key = 'xxxxxxxxxxxxxxxxxxxxxxxxx';
+    }
+    else if(key == ''){
+        throw new Error('Bad key');
+    }
+    else{
+        for(var i=0; i<key.length; i++){
+            if(key.charCodeAt(i) < 97 || key.charCodeAt(i) > 122){
+                throw new Error('Bad key');
+            }
+        }
+        this.key = key;
+    }
 }
 
 Cipher.prototype.encode = function(input) {
